@@ -1,0 +1,27 @@
+a {
+  font-family: var(--font-family, sans-serif);
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--color-primary-dawn, #87027B);
+  line-height: var(--font-line-height-paragraph2, 20px);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px var(--border-style-link, dotted);
+  transition: 0.2s ease-out;
+}
+
+:host([dark]) a {
+  color: var(--color-primary-daybreak, #3CCBDA);
+}
+
+a:hover {
+  color: var(--color-secondary-dawn-light, #B130A6);
+  transition: 0.2s ease-in;
+}
+
+:host(:not([disabled])) a {
+  cursor: pointer;
+}
+
+:host([disabled]) a {
+  color: var(--color-secondary-grey-light, #D8D8D8)
+}
